@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo 'AWS RDS'
+exit 0
