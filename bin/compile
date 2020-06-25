@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 DATABASE_NAME=tooli-heroku-review-${SOURCE_VERSION}
-PGPASSWORD=$(< ${3}/PGPASSWORD) psql -h tooli-heroku-review-apps.cydbxrdlzssn.eu-west-1.rds.amazonaws.com -U postgres -c "CREATE DATABASE ${DATABASE_NAME//-/} WITH LC_COLLATE = 'fi_FI.UTF-8' TEMPLATE template0"
+PGPASSWORD=$(< ${3}/PGPASSWORD) psql -h tooli-heroku-review-apps.cydbxrdlzssn.eu-west-1.rds.amazonaws.com -U postgres -c "CREATE DATABASE ${DATABASE_NAME//-/} WITH LC_COLLATE = 'fi_FI.UTF-8' LC_CTYPE = 'fi_FI.UTF-8' TEMPLATE template0"
